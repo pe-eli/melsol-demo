@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MelSol — Biquínis & Moda Praia</title>
+  <meta name="description" content="MelSol — Biquínis e roupas de praia com a leveza do verão. Descubra nossa coleção praiana.">
+
+  <!-- Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════ HEADER / NAV ═══════════════════ -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <img src="public/logo.png" alt="MelSol" class="nav__logo-img" onerror="this.onerror=null;this.src='public/logo.png';">
+        <p>MelSol</p>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#colecao" class="nav__link">Coleção</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+
+      <button class="nav__cart" aria-label="Carrinho de compras">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="nav__cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
+  <section class="hero" id="home">
+    <!-- Decorative wave SVG -->
+    <div class="hero__bg">
+      <div class="hero__gradient"></div>
+      <svg class="hero__wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="rgba(255,255,255,0.15)" d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,128C672,117,768,139,864,170.7C960,203,1056,245,1152,240C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"/>
+      </svg>
+      <svg class="hero__wave hero__wave--2" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="rgba(255,255,255,0.08)" d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,229.3C672,235,768,213,864,186.7C960,160,1056,128,1152,138.7C1248,149,1344,203,1392,229.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"/>
+      </svg>
+    </div>
+
+    <div class="hero__content container">
+      <span class="hero__badge">Nova Coleção Verão 2026</span>
+      <h1 class="hero__title">
+        Sinta a brisa.<br>
+        <span class="hero__title--accent">Vista o verão.</span>
+      </h1>
+      <p class="hero__subtitle">
+        Biquínis e moda praia com design exclusivo, feitos para quem vive o verão com estilo e liberdade.
+      </p>
+      <div class="hero__actions">
+        <a href="#colecao" class="btn btn--primary">
+          Comprar Agora
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#sobre" class="btn btn--outline">Conheça a MelSol</a>
+      </div>
+    </div>
+
+    <!-- Decorative floating elements -->
+    <div class="hero__decor hero__decor--sun" aria-hidden="true"></div>
+    <div class="hero__decor hero__decor--shell1" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
+        <path d="M32 4C18 4 8 20 8 36c0 12 8 24 24 24s24-12 24-24C56 20 46 4 32 4z" stroke="currentColor" stroke-width="2" fill="currentColor" opacity="0.15"/>
+        <path d="M32 4v56M8 36h48M14 16l36 32M14 48l36-32" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="hero__decor hero__decor--shell2" aria-hidden="true">
+      <svg viewBox="0 0 48 48" width="36" height="36" fill="none">
+        <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" opacity="0.2"/>
+        <path d="M24 4a20 20 0 0 1 0 40" stroke="currentColor" stroke-width="1.5" opacity="0.15" fill="currentColor" fill-opacity="0.08"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ COLLECTION SECTION ═══════════════════ -->
+  <section class="collection" id="colecao">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Coleção em Destaque</span>
+        <h2 class="section-header__title">Peças que são a cara do verão</h2>
+        <p class="section-header__text">Cada peça foi desenhada pensando em conforto, estilo e a liberdade de um dia de sol.</p>
+      </div>
+
+      <div class="products">
+        <!-- Product 1 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="https://images.unsplash.com/photo-1596566823540-d6a4b6a08b72?w=480&h=600&fit=crop&crop=center" alt="Biquíni Coral Sunset" loading="lazy">
+            <span class="product-card__badge">Novo</span>
+            <div class="product-card__overlay">
+              <button class="product-card__action" aria-label="Adicionar ao carrinho">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              </button>
+              <button class="product-card__action" aria-label="Favoritar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Biquíni Coral Sunset</h3>
+            <p class="product-card__price">R$ 189,90</p>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=480&h=600&fit=crop&crop=center" alt="Biquíni Oceano Azul" loading="lazy">
+            <div class="product-card__overlay">
+              <button class="product-card__action" aria-label="Adicionar ao carrinho">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              </button>
+              <button class="product-card__action" aria-label="Favoritar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Biquíni Oceano Azul</h3>
+            <p class="product-card__price">R$ 209,90</p>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="https://images.unsplash.com/photo-1570976447640-ac859083963f?w=480&h=600&fit=crop&crop=center" alt="Saída de Praia Areia" loading="lazy">
+            <span class="product-card__badge product-card__badge--sale">-20%</span>
+            <div class="product-card__overlay">
+              <button class="product-card__action" aria-label="Adicionar ao carrinho">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              </button>
+              <button class="product-card__action" aria-label="Favoritar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Saída de Praia Areia</h3>
+            <p class="product-card__price">
+              <span class="product-card__price--old">R$ 249,90</span>
+              R$ 199,90
+            </p>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=480&h=600&fit=crop&crop=center" alt="Biquíni Sol Dourado" loading="lazy">
+            <div class="product-card__overlay">
+              <button class="product-card__action" aria-label="Adicionar ao carrinho">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              </button>
+              <button class="product-card__action" aria-label="Favoritar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Biquíni Sol Dourado</h3>
+            <p class="product-card__price">R$ 219,90</p>
+          </div>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="https://images.unsplash.com/photo-1582639510494-c80b5de9f148?w=480&h=600&fit=crop&crop=center" alt="Maiô Trópica" loading="lazy">
+            <span class="product-card__badge">Best Seller</span>
+            <div class="product-card__overlay">
+              <button class="product-card__action" aria-label="Adicionar ao carrinho">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              </button>
+              <button class="product-card__action" aria-label="Favoritar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Maiô Trópica</h3>
+            <p class="product-card__price">R$ 259,90</p>
+          </div>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="https://images.unsplash.com/photo-1561845730-208ad5910553?w=480&h=600&fit=crop&crop=center" alt="Conjunto Brisa do Mar" loading="lazy">
+            <div class="product-card__overlay">
+              <button class="product-card__action" aria-label="Adicionar ao carrinho">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              </button>
+              <button class="product-card__action" aria-label="Favoritar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Conjunto Brisa do Mar</h3>
+            <p class="product-card__price">R$ 279,90</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="collection__cta">
+        <a href="#" class="btn btn--primary">
+          Ver Toda a Coleção
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT SECTION ═══════════════════ -->
+  <section class="about" id="sobre">
+    <div class="about__wave-top" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path fill="currentColor" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,53.3C1120,53,1280,75,1360,85.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-col">
+          <div class="about__image">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=750&fit=crop&crop=center" alt="Praia tropical com água cristalina" loading="lazy">
+          </div>
+          <div class="about__image about__image--float">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=300&h=400&fit=crop&crop=center" alt="Ambiente praiano relaxante" loading="lazy">
+          </div>
+        </div>
+
+        <div class="about__text-col">
+          <span class="section-header__tag">Nossa História</span>
+          <h2 class="about__title">Nascemos do amor pelo mar e pelo sol</h2>
+          <p class="about__text">
+            A MelSol nasceu de um sonho: criar peças que capturassem a essência de um dia perfeito de praia. Cada biquíni, cada saída de praia, cada detalhe é pensado para que você se sinta linda, confortável e livre.
+          </p>
+          <p class="about__text">
+            Valorizamos a sustentabilidade, o conforto e a beleza natural. Nossas peças são feitas com materiais de alta qualidade e tingimentos que respeitam o meio ambiente, porque acreditamos que cuidar da natureza é cuidar de nós.
+          </p>
+
+          <div class="about__values">
+            <div class="about__value">
+              <div class="about__value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </div>
+              <div>
+                <h4 class="about__value-title">Feito com Amor</h4>
+                <p class="about__value-text">Cada peça é desenhada com carinho e atenção aos detalhes.</p>
+              </div>
+            </div>
+            <div class="about__value">
+              <div class="about__value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
+              <div>
+                <h4 class="about__value-title">Sustentável</h4>
+                <p class="about__value-text">Materiais eco-friendly e processos que respeitam a natureza.</p>
+              </div>
+            </div>
+            <div class="about__value">
+              <div class="about__value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div>
+                <h4 class="about__value-title">Qualidade Premium</h4>
+                <p class="about__value-text">Tecidos de alta qualidade para durabilidade e conforto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ NEWSLETTER SECTION ═══════════════════ -->
+  <section class="newsletter" id="contato">
+    <div class="newsletter__bg" aria-hidden="true">
+      <svg class="newsletter__wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="rgba(255,255,255,0.06)" d="M0,96L60,112C120,128,240,160,360,154.7C480,149,600,107,720,101.3C840,96,960,128,1080,149.3C1200,171,1320,181,1380,186.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="newsletter__content">
+        <div class="newsletter__icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <h2 class="newsletter__title">Fique por dentro das novidades</h2>
+        <p class="newsletter__text">Cadastre-se e receba em primeira mão as novas coleções, promoções exclusivas e dicas de moda praia.</p>
+
+        <form class="newsletter__form" id="newsletterForm">
+          <div class="newsletter__input-group">
+            <label for="emailInput" class="sr-only">Seu melhor e-mail</label>
+            <input
+              type="email"
+              id="emailInput"
+              class="newsletter__input"
+              placeholder="Seu melhor e-mail"
+              required
+              autocomplete="email"
+            >
+            <button type="submit" class="btn btn--primary newsletter__btn">
+              Inscrever-se
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <p class="newsletter__disclaimer">Prometemos não enviar spam. Você pode se descadastrar a qualquer momento.</p>
+        </form>
+
+        <div class="newsletter__success" id="newsletterSuccess" hidden>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <p>Obrigada por se inscrever! Logo você receberá nossas novidades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="footer__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path fill="currentColor" d="M0,32L60,42.7C120,53,240,75,360,74.7C480,75,600,53,720,48C840,43,960,53,1080,64C1200,75,1320,85,1380,90.7L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <img src="public/logo.svg" alt="MelSol" class="footer__logo">
+          <p class="footer__brand-text">Biquínis e moda praia com a leveza do verão. Cada peça é feita para você brilhar ao sol.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="Pinterest">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 018 0c0 2-1 4-2 6"/><line x1="12" y1="12" x2="10" y2="22"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Column 1 -->
+        <div class="footer__links">
+          <h4 class="footer__links-title">Navegação</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#colecao">Coleção</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2 -->
+        <div class="footer__links">
+          <h4 class="footer__links-title">Atendimento</h4>
+          <ul>
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+            <li><a href="#">Guia de Tamanhos</a></li>
+            <li><a href="#">Rastrear Pedido</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3 -->
+        <div class="footer__links">
+          <h4 class="footer__links-title">Políticas</h4>
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Cookies</a></li>
+            <li><a href="#">Frete e Entrega</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 MelSol. Todos os direitos reservados.</p>
+        <p>Feito com amor e sol.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
