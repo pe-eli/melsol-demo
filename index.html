@@ -36,9 +36,19 @@
         <li><a href="#colecao" class="nav__link">Coleção</a></li>
         <li><a href="#sobre" class="nav__link">Sobre</a></li>
         <li><a href="#contato" class="nav__link">Contato</a></li>
+        <li class="nav__menu-cart">
+          <button class="nav__cart" aria-label="Carrinho de compras">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span class="nav__cart-count">0</span>
+          </button>
+        </li>
       </ul>
 
-      <button class="nav__cart" aria-label="Carrinho de compras">
+      <button class="nav__cart nav__cart--desktop" aria-label="Carrinho de compras">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -106,10 +116,10 @@
       </div>
 
       <div class="products">
-        <!-- Product 1 -->
+        <!-- Product 1 — Azul -->
         <article class="product-card">
           <div class="product-card__image">
-            <img src="https://images.unsplash.com/photo-1596566823540-d6a4b6a08b72?w=480&h=600&fit=crop&crop=center" alt="Biquíni Coral Sunset" loading="lazy">
+            <img src="public/bikini1.png" alt="Biquíni Oceano Azul" loading="lazy">
             <span class="product-card__badge">Novo</span>
             <div class="product-card__overlay">
               <button class="product-card__action" aria-label="Adicionar ao carrinho">
@@ -121,34 +131,15 @@
             </div>
           </div>
           <div class="product-card__info">
-            <h3 class="product-card__name">Biquíni Coral Sunset</h3>
+            <h3 class="product-card__name">Biquíni Oceano Azul</h3>
             <p class="product-card__price">R$ 189,90</p>
           </div>
         </article>
 
-        <!-- Product 2 -->
+        <!-- Product 2 — Vermelho -->
         <article class="product-card">
           <div class="product-card__image">
-            <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=480&h=600&fit=crop&crop=center" alt="Biquíni Oceano Azul" loading="lazy">
-            <div class="product-card__overlay">
-              <button class="product-card__action" aria-label="Adicionar ao carrinho">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              </button>
-              <button class="product-card__action" aria-label="Favoritar">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-              </button>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__name">Biquíni Oceano Azul</h3>
-            <p class="product-card__price">R$ 209,90</p>
-          </div>
-        </article>
-
-        <!-- Product 3 -->
-        <article class="product-card">
-          <div class="product-card__image">
-            <img src="https://images.unsplash.com/photo-1570976447640-ac859083963f?w=480&h=600&fit=crop&crop=center" alt="Saída de Praia Areia" loading="lazy">
+            <img src="public/bikini2.png" alt="Biquíni Coral Sunset" loading="lazy">
             <span class="product-card__badge product-card__badge--sale">-20%</span>
             <div class="product-card__overlay">
               <button class="product-card__action" aria-label="Adicionar ao carrinho">
@@ -160,7 +151,7 @@
             </div>
           </div>
           <div class="product-card__info">
-            <h3 class="product-card__name">Saída de Praia Areia</h3>
+            <h3 class="product-card__name">Biquíni Coral Sunset</h3>
             <p class="product-card__price">
               <span class="product-card__price--old">R$ 249,90</span>
               R$ 199,90
@@ -168,10 +159,10 @@
           </div>
         </article>
 
-        <!-- Product 4 -->
+        <!-- Product 3 — Bege -->
         <article class="product-card">
           <div class="product-card__image">
-            <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=480&h=600&fit=crop&crop=center" alt="Biquíni Sol Dourado" loading="lazy">
+            <img src="public/bikini3.png" alt="Biquíni Areia Dourada" loading="lazy">
             <div class="product-card__overlay">
               <button class="product-card__action" aria-label="Adicionar ao carrinho">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
@@ -182,47 +173,8 @@
             </div>
           </div>
           <div class="product-card__info">
-            <h3 class="product-card__name">Biquíni Sol Dourado</h3>
+            <h3 class="product-card__name">Biquíni Areia Dourada</h3>
             <p class="product-card__price">R$ 219,90</p>
-          </div>
-        </article>
-
-        <!-- Product 5 -->
-        <article class="product-card">
-          <div class="product-card__image">
-            <img src="https://images.unsplash.com/photo-1582639510494-c80b5de9f148?w=480&h=600&fit=crop&crop=center" alt="Maiô Trópica" loading="lazy">
-            <span class="product-card__badge">Best Seller</span>
-            <div class="product-card__overlay">
-              <button class="product-card__action" aria-label="Adicionar ao carrinho">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              </button>
-              <button class="product-card__action" aria-label="Favoritar">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-              </button>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__name">Maiô Trópica</h3>
-            <p class="product-card__price">R$ 259,90</p>
-          </div>
-        </article>
-
-        <!-- Product 6 -->
-        <article class="product-card">
-          <div class="product-card__image">
-            <img src="https://images.unsplash.com/photo-1561845730-208ad5910553?w=480&h=600&fit=crop&crop=center" alt="Conjunto Brisa do Mar" loading="lazy">
-            <div class="product-card__overlay">
-              <button class="product-card__action" aria-label="Adicionar ao carrinho">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              </button>
-              <button class="product-card__action" aria-label="Favoritar">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-              </button>
-            </div>
-          </div>
-          <div class="product-card__info">
-            <h3 class="product-card__name">Conjunto Brisa do Mar</h3>
-            <p class="product-card__price">R$ 279,90</p>
           </div>
         </article>
       </div>
@@ -336,11 +288,6 @@
           </div>
           <p class="newsletter__disclaimer">Prometemos não enviar spam. Você pode se descadastrar a qualquer momento.</p>
         </form>
-
-        <div class="newsletter__success" id="newsletterSuccess" hidden>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <p>Obrigada por se inscrever! Logo você receberá nossas novidades.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -357,7 +304,10 @@
       <div class="footer__grid">
         <!-- Brand Column -->
         <div class="footer__brand">
-          <img src="public/logo.svg" alt="MelSol" class="footer__logo">
+          <a href="#" class="footer__logo-link">
+            <img src="public/logo.png" alt="MelSol" class="footer__logo">
+            <p class="footer__logo-text">MelSol</p>
+          </a>
           <p class="footer__brand-text">Biquínis e moda praia com a leveza do verão. Cada peça é feita para você brilhar ao sol.</p>
           <div class="footer__socials">
             <a href="#" class="footer__social" aria-label="Instagram">

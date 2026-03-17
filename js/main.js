@@ -13,35 +13,17 @@
   const navLinks = document.querySelectorAll('.nav__link');
   const backToTopBtn = document.getElementById('backToTop');
   const newsletterForm = document.getElementById('newsletterForm');
-  const newsletterSuccess = document.getElementById('newsletterSuccess');
 
   // ─── Mobile Menu ───
-  let overlay = null;
-
-  function createOverlay() {
-    if (overlay) return overlay;
-    overlay = document.createElement('div');
-    overlay.className = 'nav__overlay';
-    document.body.appendChild(overlay);
-    overlay.addEventListener('click', closeMenu);
-    return overlay;
-  }
 
   function openMenu() {
     navMenu.classList.add('nav__menu--open');
-    const el = createOverlay();
-    // Force reflow before adding class
-    void el.offsetWidth;
-    el.classList.add('nav__overlay--visible');
     document.body.style.overflow = 'hidden';
     navToggle.setAttribute('aria-label', 'Fechar menu');
   }
 
   function closeMenu() {
     navMenu.classList.remove('nav__menu--open');
-    if (overlay) {
-      overlay.classList.remove('nav__overlay--visible');
-    }
     document.body.style.overflow = '';
     navToggle.setAttribute('aria-label', 'Abrir menu');
   }
@@ -188,9 +170,8 @@
       var email = document.getElementById('emailInput').value;
       if (!email) return;
 
-      // Simulate submission
-      newsletterForm.hidden = true;
-      newsletterSuccess.hidden = false;
+      // Reset form after submission
+      newsletterForm.reset();
     });
   }
 
